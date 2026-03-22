@@ -32,7 +32,7 @@ export function HeroSection() {
 
             {/* Description */}
             <Reveal delay={0.1}>
-              <p className="max-w-xl text-base md:text-lg leading-7 md:leading-8 text-white">
+              <p className="max-w-xl text-base md:text-lg leading-7 md:leading-8 text-white/80">
                 Suntem agenția dedicată brandurilor care vor mai mult decât simple postări online. Combinăm creativitatea foto-video cu strategia pentru a construi o imagine coerentă și a-ți crește vizibilitatea și vânzările.
               </p>
             </Reveal>

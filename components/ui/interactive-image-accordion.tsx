@@ -31,7 +31,7 @@ const accordionItems: AccordionItemData[] = [
     description:
       "Conținut dinamic și orientat spre rezultate: clipuri de prezentare, reclame, reels și materiale pentru campanii. Asigurăm scenariu, filmare, montaj și colorizare optimizate pentru captarea atenției în primele secunde.",
     imageUrl:
-      "https://images.unsplash.com/photo-1579165466741-7f35e4755660?q=80&w=2070&auto=format&fit=crop",
+      "/video.jpg",
     icon: Clapperboard,
   },
   {
@@ -40,7 +40,7 @@ const accordionItems: AccordionItemData[] = [
     description:
       "Strategie personalizată, analiză, creare de conținut foto-video și administrare completă. Transformăm paginile tale sociale în instrumente reale de atragere a clienților prin planificare și raportare lunară.",
     imageUrl:
-      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2074&auto=format&fit=crop",
+      "/socialmedia.jpg",
     icon: Share2,
   },
   {
