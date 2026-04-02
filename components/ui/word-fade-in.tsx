@@ -9,6 +9,7 @@ interface WordFadeInProps {
   className?: string;
   delay?: number;
   variants?: Variants;
+  style?: React.CSSProperties;
 }
 
 function WordFadeIn({
@@ -23,6 +24,7 @@ function WordFadeIn({
     }),
   },
   className,
+  style,
 }: WordFadeInProps) {
   const _words = words.split(" ");
 
@@ -31,6 +33,7 @@ function WordFadeIn({
       variants={variants}
       initial="hidden"
       animate="visible"
+      style={style}
       className={cn(
         "font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]",
         className,

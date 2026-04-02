@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Exo_2, Boldonse, Gravitas_One } from "next/font/google";
 import "./globals.css";
 
 const heading = Plus_Jakarta_Sans({
@@ -10,6 +10,26 @@ const heading = Plus_Jakarta_Sans({
 
 const body = Inter({
   variable: "--font-body",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const exo2 = Exo_2({
+  variable: "--font-exo2",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const boldonse = Boldonse({
+  variable: "--font-boldonse",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const gravitasOne = Gravitas_One({
+  variable: "--font-gravitas",
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
@@ -27,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${heading.variable} ${body.variable} antialiased`}>{children}</body>
+      <body className={`${heading.variable} ${body.variable} ${exo2.variable} ${boldonse.variable} ${gravitasOne.variable} antialiased`}>{children}</body>
     </html>
   );
 }
