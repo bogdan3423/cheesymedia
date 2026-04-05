@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -18,18 +19,22 @@ interface NavBarProps {
 }
 
 export function NavBar({ items, className }: NavBarProps) {
-  const [activeTab, setActiveTab] = useState(items[0].name);
-  const [isMobile, setIsMobile] = useState(false);
+  const pathname = usePathname();
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+  const getActiveItem = () => {
+    // Match by pathname for page routes
+    const pageMatch = items.find(
+      (item) => item.url.startsWith("/") && pathname === item.url
+    );
+    if (pageMatch) return pageMatch.name;
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    // On the home page, default to "Home"
+    if (pathname === "/") return items[0]?.name;
+
+    return items[0]?.name;
+  };
+
+  const activeTab = getActiveItem();
 
   return (
     <nav className={cn("inline-flex", className)}>
@@ -42,7 +47,7 @@ export function NavBar({ items, className }: NavBarProps) {
             <Link
               key={item.name}
               href={item.url}
-              onClick={() => setActiveTab(item.name)}
+              prefetch={true}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-4 py-1.5 rounded-full transition-colors",
                 "text-primary-foreground/70 hover:text-primary-foreground",

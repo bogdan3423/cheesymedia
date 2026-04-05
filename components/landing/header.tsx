@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, Home, Briefcase, Settings, Phone } from "lucide-react";
+import { Menu, Home, Briefcase, Settings, Phone, Mail } from "lucide-react";
 
 import { navLinks } from "@/components/landing/data";
 import { Button } from "@/components/ui/button";
@@ -18,15 +18,15 @@ import {
 } from "@/components/ui/sheet";
 
 const navItems = [
-  { name: "Home", url: "#hero", icon: Home },
-  { name: "Servicii", url: "#services", icon: Briefcase },
-  { name: "Cum Lucrăm?", url: "#process", icon: Settings },
+  { name: "Home", url: "/", icon: Home },
+  { name: "Servicii", url: "/services", icon: Briefcase },
+  { name: "Cum Lucrăm?", url: "/process", icon: Settings },
   { name: "Contact", url: "#contact", icon: Phone },
 ];
 
 function Brand() {
   return (
-    <Link href="#" className="inline-flex items-center gap-2 transition-transform hover:scale-[1.02]">
+    <Link href="/" className="inline-flex items-center gap-2 transition-transform hover:scale-[1.02]">
       <Image 
         src="/logo.png" 
         alt="Cheesy Media Logo" 
@@ -90,11 +90,17 @@ export function Header() {
                 onItemClick={() => setSheetOpen(false)}
               />
             </div>
-            <div className="pb-6 px-2">
+            <div className="pb-6 px-2 flex flex-col gap-3">
               <Button variant="accent" className="w-full h-14 text-base font-bold rounded-xl" asChild>
                 <Link href="tel:+40742918500" onClick={() => setSheetOpen(false)}>
                   Sună-ne Acum
                   <Phone className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" className="w-full h-14 text-base font-bold rounded-xl border-primary-foreground/20 bg-primary-foreground/5 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" asChild>
+                <Link href="mailto:hello@cheesymedia.ro" onClick={() => setSheetOpen(false)}>
+                  Scrie-ne un Email
+                  <Mail className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>

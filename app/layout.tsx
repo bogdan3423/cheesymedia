@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans, Exo_2, Boldonse, Gravitas_One } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/landing/header";
+import { Footer } from "@/components/landing/footer";
 
 const heading = Plus_Jakarta_Sans({
   variable: "--font-heading",
@@ -47,7 +49,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${heading.variable} ${body.variable} ${exo2.variable} ${boldonse.variable} ${gravitasOne.variable} antialiased`}>{children}</body>
+      <body className={`${heading.variable} ${body.variable} ${exo2.variable} ${boldonse.variable} ${gravitasOne.variable} antialiased`}>
+        <div className="min-h-screen bg-background text-foreground">
+          <Header />
+          {children}
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
