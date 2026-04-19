@@ -24,7 +24,7 @@ export default function ServicesPage() {
             <Reveal delay={0.05}>
               <h1
                 className="max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-[3.45rem] text-primary-foreground"
-                style={{ fontFamily: '"Gravitas One", serif' }}
+                style={{ fontFamily: '"Alfa Slab One", serif' }}
               >
                 Totul de care ai nevoie pentru a crește online
               </h1>

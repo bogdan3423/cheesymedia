@@ -28,8 +28,8 @@ export function ServicesSection() {
             <p className="text-sm font-medium text-foreground/60">
               Ai nevoie de ceva personalizat?
             </p>
-            <Button variant="accent" size="lg" asChild>
-              <Link href="https://forms.google.com/YOUR-FORM-ID" target="_blank" rel="noopener noreferrer">
+            <Button variant="accent" size="lg" className="h-14 px-10 text-base font-bold rounded-xl" asChild>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdlbW6mGcgbexrQ_nVpbZzWd_TvJtabzzPsiJuAECGNhH5R5Q/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
                 Trimite o cerere personalizată
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Link>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans, Exo_2, Boldonse, Gravitas_One } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Exo_2, Boldonse, Alfa_Slab_One } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/landing/header";
 import { Footer } from "@/components/landing/footer";
@@ -29,10 +29,10 @@ const boldonse = Boldonse({
   display: "swap",
 });
 
-const gravitasOne = Gravitas_One({
-  variable: "--font-gravitas",
+const alfaSlabOne = Alfa_Slab_One({
+  variable: "--font-alfa-slab",
   weight: "400",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   display: "swap",
 });
 
@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${heading.variable} ${body.variable} ${exo2.variable} ${boldonse.variable} ${gravitasOne.variable} antialiased`}>
+      <body className={`${heading.variable} ${body.variable} ${exo2.variable} ${boldonse.variable} ${alfaSlabOne.variable} antialiased`}>
         <div className="min-h-screen bg-background text-foreground">
           <Header />
           {children}

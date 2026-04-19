@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -26,11 +27,18 @@ export function FinalCtaSection() {
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button variant="accent" size="lg" asChild>
+              <Button variant="accent" size="lg" className="h-14 px-10 text-base font-bold rounded-xl" asChild>
                 <Link href="tel:+40742918500">Sună-ne Acum</Link>
               </Button>
 
-              <Button variant="outline" size="lg" className="border-primary-foreground/90 bg-transparent text-primary-foreground shadow-[2px_2px_0px_0px_var(--primary-foreground)] hover:bg-primary-foreground/10" asChild>
+              <Button variant="accent" size="lg" className="h-14 px-10 text-base font-bold rounded-xl" asChild>
+                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdlbW6mGcgbexrQ_nVpbZzWd_TvJtabzzPsiJuAECGNhH5R5Q/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+                  Trimite o cerere personalizată
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+
+              <Button variant="outline" size="lg" className="h-14 px-10 text-base font-bold rounded-xl border-primary-foreground/90 bg-transparent text-primary-foreground shadow-[2px_2px_0px_0px_var(--primary-foreground)] hover:bg-primary-foreground/10" asChild>
                 <Link href="#services">Vezi Serviciile</Link>
               </Button>
             </div>

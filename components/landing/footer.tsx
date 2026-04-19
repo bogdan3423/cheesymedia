@@ -40,8 +40,8 @@ export function Footer() {
             <p className="text-sm font-semibold">Contact</p>
             <ul className="mt-3 space-y-2 text-sm text-primary-foreground/70">
               <li>
-                <Link href="mailto:hello@cheesymedia.ro" className="transition-colors hover:text-primary-foreground">
-                  hello@cheesymedia.ro
+                <Link href="mailto:office.cheesymedia@gmail.com" className="transition-colors hover:text-primary-foreground">
+                  office.cheesymedia@gmail.com
                 </Link>
               </li>
               <li>

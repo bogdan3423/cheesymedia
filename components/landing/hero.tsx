@@ -26,8 +26,8 @@ export function HeroSection() {
             {/* Heading */}
             <WordFadeIn
               words="Conținut vizual și strategii care generează rezultate reale."
-              className="max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-[3.45rem] text-primary-foreground drop-shadow-none"
-              style={{ fontFamily: '"Gravitas One", serif' }}
+              className="max-w-3xl text-3xl font-normal leading-tight sm:text-4xl md:text-5xl lg:text-[3.45rem] text-primary-foreground drop-shadow-none"
+              style={{ fontFamily: '"Alfa Slab One", serif' }}
               delay={0.08}
             />
 
@@ -71,7 +71,7 @@ export function HeroSection() {
             </Button>
             
             <Link 
-              href="#services" 
+              href="/services" 
               className="group flex items-center gap-3 text-sm font-bold tracking-wide text-primary-foreground transition-colors hover:text-accent"
             >
               <span className="underline decoration-primary-foreground/30 decoration-2 underline-offset-4 transition-colors group-hover:decoration-accent">

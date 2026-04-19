@@ -98,7 +98,7 @@ export function Header() {
                 </Link>
               </Button>
               <Button variant="outline" className="w-full h-14 text-base font-bold rounded-xl border-primary-foreground/20 bg-primary-foreground/5 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" asChild>
-                <Link href="mailto:hello@cheesymedia.ro" onClick={() => setSheetOpen(false)}>
+                <Link href="mailto:office.cheesymedia@gmail.com" onClick={() => setSheetOpen(false)}>
                   Scrie-ne un Email
                   <Mail className="ml-2 h-5 w-5" />
                 </Link>
